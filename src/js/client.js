@@ -3,7 +3,9 @@ import ReactDOM from "react-dom"
 import { Router, Route, hashHistory, IndexRoute } from "react-router"
 import Landing from "./pages/Landing"
 import Layout from "./pages/Layout"
+import Digital from "./pages/Digital"
 import About from "./pages/About"
+import Vector from "./pages/Vector"
 import Portfolio from "./pages/Portfolio"
 const app = document.getElementById('app');
 
@@ -13,5 +15,7 @@ ReactDOM.render(
       <IndexRoute component={Landing}></IndexRoute>
       <Route path = "about" component = {About}></Route>
       <Route path = "portfolio(/:image)" component = {Portfolio}></Route>
+      <Route path = "vector" component = {Vector}></Route>
+      <Route path = "digital" component = {Digital}></Route>
     </Route>
   </Router>, app);

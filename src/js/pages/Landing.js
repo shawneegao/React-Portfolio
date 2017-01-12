@@ -1,9 +1,10 @@
 import React from "react"
+import Portfolio from "./Portfolio.js"
 
 export default class Landing extends React.Component{
   render(){
     return(
-      <h1>Landing</h1>
+      <Portfolio/>
     );
   }
 }
