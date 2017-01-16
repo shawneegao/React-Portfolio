@@ -1,9 +1,13 @@
 import React from "react"
 
 export default class Title extends React.Component{
+
   render(){
+    const logoStyle = {
+      width:260
+    };
     return(
-      <h1>{this.props.title}</h1>
+      <img style = {logoStyle} src = "../../imagesrc/shawnee.png" alt = "shawnee"/>
     );
   }
 }

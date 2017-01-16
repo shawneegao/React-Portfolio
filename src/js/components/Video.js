@@ -18,26 +18,20 @@ var Video = React.createClass({
       var imageStyle = this.props.style
       var childElements = this.props.elements.imageInfo.map(function(element){
           return (
-               <div class = "video-wrapper">
+               <div class = "video-wrapper col-lg-6">
                <div class= "text-wrapper">
                  <span class = "video-title fred"> {element.title} </span>
                  <p class ="jose">{element.caption}</p>
                  <p class = "jose">{element.method}</p>
                </div>
-                 <ReactPlayer width={400} loop={true} url={element.src} playing/>
+                 <ReactPlayer width={'initial'} loop={true} url={element.src} playing/>
                </div>
            );
        });
        return (
-            <Masonry
-                className={'my-gallery-class'} // default ''
-                elementType={'ul'} // default 'div'
-                options={masonryOptions} // default {}
-                disableImagesLoaded={false} // default false
-                updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
-            >
+         <div>
             {childElements}
-            </Masonry>
+        </div>
         );
     }
 });
