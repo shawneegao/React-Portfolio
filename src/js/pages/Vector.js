@@ -15,6 +15,13 @@ var elements = '{\
       "caption": "Opening for a cupcake store\'s website.",\
       "method":"Animated with GSAP."\
     }\
+    ,\
+    {\
+      "title": "Cupcake Intro",\
+      "src": "../../imagesrc/humanadvancement.mp4",\
+      "caption": "Somethings never change.",\
+      "method":"Animated with GSAP- WIP."\
+    }\
   ]\
 }'
 
