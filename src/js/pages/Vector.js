@@ -17,7 +17,7 @@ var elements = '{\
     }\
     ,\
     {\
-      "title": "Cupcake Intro",\
+      "title": "Human Advancement in Technology",\
       "src": "../../imagesrc/humanadvancement.mp4",\
       "caption": "Somethings never change.",\
       "method":"Animated with GSAP- WIP."\
