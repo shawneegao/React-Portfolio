@@ -6,17 +6,17 @@ var elements = '{\
   "imageInfo": [\
     {\
       "title": "Solaris",\
-      "src": "../../imagesrc/Solaris-min.jpg",\
+      "src": "../../imagesrc/Solaris.jpg",\
       "caption": "A friend\'s original character"\
     },\
     {\
       "title": "Niffler",\
-      "src": "../../imagesrc/Niffler-min.jpg",\
+      "src": "../../imagesrc/Niffler.jpg",\
       "caption": "...holding onto his hopes and dreams"\
     },\
     {\
       "title": "Picking Favorites",\
-      "src": "../../imagesrc/Bowtruckle-min.jpg",\
+      "src": "../../imagesrc/Bowtruckle.jpg",\
       "caption": "Best relationship in the movie"\
     },\
      {\
@@ -31,32 +31,32 @@ var elements = '{\
     },\
      {\
       "title": "Kimchi",\
-      "src": "../../imagesrc/Kimchi-min.jpg",\
+      "src": "../../imagesrc/Kimchi.jpg",\
       "caption": "Season 8 Rupaul\'s Drag Race. Watch it"\
     },\
     {\
       "title": "My Hogwarts Letter",\
-      "src": "../../imagesrc/HogwartsLetter-min.jpg",\
+      "src": "../../imagesrc/HogwartsLetter.jpg",\
       "caption": "I waited by my fire place after this"\
     },\
      {\
       "title": "Cake Explorers",\
-      "src": "../../imagesrc/AngelFoodCake-min.jpg",\
+      "src": "../../imagesrc/AngelFoodCake.jpg",\
       "caption": "Was feeling hungry and adventurous"\
     },\
      {\
       "title": "Pi & Joules",\
-      "src": "../../imagesrc/PiJoules-min.jpg",\
+      "src": "../../imagesrc/PiJoules.jpg",\
       "caption": "I like my co-worker\'s dogs"\
     },\
      {\
       "title": "For a Shoe Lover",\
-      "src": "../../imagesrc/Shoes-min.jpg",\
+      "src": "../../imagesrc/Shoes.jpg",\
       "caption": "Creating some stationary designs"\
     },\
      {\
       "title": "Peppers",\
-      "src": "../../imagesrc/Peppers-min.jpg",\
+      "src": "../../imagesrc/Peppers.jpg",\
       "caption": "Would you call this interpretated realism?"\
     },\
      {\
@@ -66,7 +66,7 @@ var elements = '{\
     },\
     {\
       "title": "Yuri On Ice",\
-      "src": "../../imagesrc/YOI-min.jpg",\
+      "src": "../../imagesrc/YOI.jpg",\
       "caption": "I am anime trash"\
     }\
   ]\
