@@ -44,7 +44,7 @@
   "devDependencies": {},
   "scripts": {
     "build": "webpack --config webpack.config.js --progress",
-    "dev": "webpack-dev-server --content-base src --inline --hot",
+    "dev": "webpack-dev-server --content-base src",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start":"NODE_ENV=production node app.js"
   },
