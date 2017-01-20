@@ -36,7 +36,7 @@ export default class Vector extends React.Component{
     return(
       <div class= 'container'>
         <div class = "row">
-          <div class = "col-lg-12">
+          <div class = "col-lg-12 col-md-12 col-sm-12">
             <Video elements ={this.state.elements}/>
           </div>
         </div>

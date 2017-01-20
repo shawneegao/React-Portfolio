@@ -18,12 +18,12 @@ var Video = React.createClass({
       var imageStyle = this.props.style
       var childElements = this.props.elements.imageInfo.map(function(element){
           return (
-               <div class = "video-wrapper col-lg-6">
-               <div class= "text-wrapper">
-                 <span class = "video-title fred"> {element.title} </span>
-                 <p class ="jose">{element.caption}</p>
-                 <p class = "jose">{element.method}</p>
-               </div>
+               <div class = "video-wrapper col-lg-6 col-md-6 col-sm-12">
+                 <div class= "text-wrapper col-lg-6 col-md-6 col-sm-12">
+                   <span class = "video-title fred"> {element.title} </span>
+                   <p class ="jose">{element.caption}</p>
+                   <p class = "jose">{element.method}</p>
+                 </div>
                  <ReactPlayer width={'initial'} loop={true} url={element.src} playing/>
                </div>
            );
