@@ -13,32 +13,38 @@ export default class Portfolio extends React.Component{
   constructor(){
     super();
     this.state = {
-        isOpen: false
+        isOpen: false,
+        currentImage:null
     };
   }
-  render(){
-    console.log(this.props)
+  lightbox(param){
+    console.log(param);
 
-    var imageWidth = this.props.style
-    var isOpen = false;
-    var openLightbox = function(){
-      isOpen = true
-      console.log(isOpen)
-    }
-    console.log(isOpen)
-    var childElements = this.props.elements.imageInfo.map(function(element){
+    this.setState({currentImage:param});
+    this.setState({ isOpen: true })
+  }
+  render(){
+
+    console.log(this.props)
+    const {
+            photoIndex,
+            isOpen
+        } = this.state;
+
+
+    var childElements = this.props.elements.imageInfo.map((element) => {
         return (
              <div class= "image-wrapper" >
                 <div class= "text-wrapper">
                   <span class = "piece-title fred"> {element.title} </span>
                   <p class ="jose">{element.caption}</p>
                 </div>
-                   <img onClick= {openLightbox} className="piece" style ={imageWidth} src={element.src}/>
-                   {isOpen && <div>SOMETHING IS THERE </div>}
+                   <img onClick = {()=>this.lightbox(element.src)} className="piece" style ={this.props.style} src={element.src}/>
              </div>
          );
      });
      return (
+       <div>
           <Masonry
               className={'my-gallery-class'} // default ''
               elementType={'ul'} // default 'div'
@@ -47,7 +53,10 @@ export default class Portfolio extends React.Component{
               updateOnEachImageLoad={true} // default false and works only if disableImagesLoaded is false
           >
           {childElements}
+          {isOpen && <Lightbox mainSrc = {this.state.currentImage} onCloseRequest={() => this.setState({ isOpen: false })}></Lightbox>}
           </Masonry>
+
+        </div>
       );
   }
 };
