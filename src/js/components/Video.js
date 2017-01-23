@@ -8,32 +8,49 @@ var masonryOptions = {
 
 };
 
-var Video = React.createClass({
+export default class Video extends React.Component{
+  constructor(){
+    super();
+    this.state = {
+        isOpen: false,
+        currentImage:null
+    };
+  }
 
-    render:function(){
-      console.log(this.props)
-      var style = {
-          listStyle: "none"
+  lightbox(param){
+    console.log(param);
+    this.setState({currentImage:param});
+    this.setState({ isOpen: true })
+  }
+
+  render(){
+    console.log(this.props)
+    const {
+            photoIndex,
+            isOpen
+        } = this.state;
+
+    var style = {
+        listStyle: "none"
       };
-      var imageStyle = this.props.style
-      var childElements = this.props.elements.imageInfo.map(function(element){
-          return (
-               <div class = "video-wrapper col-lg-6 col-md-6 col-sm-12">
-                 <div class= "text-wrapper col-lg-6 col-md-6 col-sm-12">
-                   <span class = "video-title fred"> {element.title} </span>
-                   <p class ="jose">{element.caption}</p>
-                   <p class = "jose">{element.method}</p>
-                 </div>
-                 <ReactPlayer width={'initial'} loop={true} url={element.src} playing/>
+    var imageStyle = this.props.style
+    var childElements = this.props.elements.imageInfo.map((element)=>{
+        return (
+             <div class = "video-wrapper col-lg-6 col-md-6 col-sm-12" >
+               <div onClick = {()=>this.lightbox(element.src)} class= "text-wrapper">
+                 <span class = "video-title fred"> {element.title} </span>
+                 <p class ="jose">{element.caption}</p>
+                 <p class = "jose">{element.method}</p>
                </div>
-           );
-       });
-       return (
-         <div>
-            {childElements}
-        </div>
-        );
+               <ReactPlayer width={'initial'} loop={true} url={element.src} playing/>
+             </div>
+         );
+     });
+     return (
+       <div>
+          {childElements}
+          {isOpen && <Lightbox mainSrc = {this.state.currentImage} onCloseRequest={() => this.setState({ isOpen: false })}></Lightbox>}
+      </div>
+      );
     }
-});
-
-module.exports = Video;
+  };

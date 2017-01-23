@@ -9,7 +9,7 @@ var masonryOptions = {
 };
 
 
-export default class Portfolio extends React.Component{
+export default class Image extends React.Component{
   constructor(){
     super();
     this.state = {
@@ -19,7 +19,6 @@ export default class Portfolio extends React.Component{
   }
   lightbox(param){
     console.log(param);
-
     this.setState({currentImage:param});
     this.setState({ isOpen: true })
   }
@@ -34,12 +33,12 @@ export default class Portfolio extends React.Component{
 
     var childElements = this.props.elements.imageInfo.map((element) => {
         return (
-             <div class= "image-wrapper" >
+             <div class= "image-wrapper" onClick = {()=>this.lightbox(element.src)} >
                 <div class= "text-wrapper">
                   <span class = "piece-title fred"> {element.title} </span>
                   <p class ="jose">{element.caption}</p>
                 </div>
-                   <img onClick = {()=>this.lightbox(element.src)} className="piece" style ={this.props.style} src={element.src}/>
+                   <img className="piece" style ={this.props.style} src={element.src}/>
              </div>
          );
      });
