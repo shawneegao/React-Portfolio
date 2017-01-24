@@ -18,7 +18,7 @@ var elements = '{\
     ,\
     {\
       "title": "Human Advancement in Technology",\
-      "src": "../../imagesrc/humanadvancement.mp4",\
+      "src": "../../imagesrc/tech_thru_ages.mp4",\
       "caption": "Somethings never change.",\
       "method":"Animated with GSAP- WIP."\
     }\
