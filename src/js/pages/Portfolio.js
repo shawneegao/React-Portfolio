@@ -32,7 +32,7 @@ var elements = '{\
     },\
     {\
       "title": "Close up - Niffler",\
-      "src": "../../imagesrc/NifflerCloseup.jpg",\
+      "src": "../../imagesrc/NifflerCloseUp.jpg",\
       "caption": "...holding onto his hopes and dreams"\
     },\
     {\
@@ -67,12 +67,12 @@ var elements = '{\
    },\
    {\
     "title": "Soldier in Apocalypse",\
-    "src": "../../imagesrc/Tokyo.jpg",\
+    "src": "../../imagesrc/tokyo.jpg",\
     "caption": "Inspired by Tsuabasa by CLAMP"\
   },\
   {\
    "title": "Close Up - Soldier in Apocalypse",\
-   "src": "../../imagesrc/TokyoCloseup.jpg",\
+   "src": "../../imagesrc/tokyoCloseup.jpg",\
    "caption": "Inspired by Tsuabasa by CLAMP"\
  },\
      {\
