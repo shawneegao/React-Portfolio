@@ -1,5 +1,10 @@
+{/*This component takes an array of json objects
+   and parses it to create an array of elements
+   that have a text wrapper and on click light box
+   Inherits style from parent component */}
 import React, { Component } from 'react';
 import Lightbox from 'react-image-lightbox';
+import style from './Image.css'
 var Masonry = require('react-masonry-component');
 
 var masonryOptions = {
@@ -7,7 +12,6 @@ var masonryOptions = {
     stagger: 30,
     gutter:40,
 };
-
 
 export default class Image extends React.Component{
   constructor(){
@@ -18,19 +22,14 @@ export default class Image extends React.Component{
     };
   }
   lightbox(param){
-    console.log(param);
     this.setState({currentImage:param});
     this.setState({ isOpen: true })
   }
   render(){
-
-    console.log(this.props)
     const {
             photoIndex,
             isOpen
         } = this.state;
-
-
     var childElements = this.props.elements.imageInfo.map((element) => {
         return (
              <div class= "image-wrapper" onClick = {()=>this.lightbox(element.src)} >
@@ -38,12 +37,12 @@ export default class Image extends React.Component{
                   <span class = "piece-title fred"> {element.title} </span>
                   <p class ="jose">{element.caption}</p>
                 </div>
-                   <img className="piece" style ={this.props.style} src={element.src}/>
+                   <img class ={this.props.style} src={element.src}/>
              </div>
          );
      });
      return (
-       <div>
+       <div class = "test">
           <Masonry
               className={'my-gallery-class'} // default ''
               elementType={'ul'} // default 'div'
@@ -54,7 +53,6 @@ export default class Image extends React.Component{
           {childElements}
           {isOpen && <Lightbox mainSrc = {this.state.currentImage} onCloseRequest={() => this.setState({ isOpen: false })}></Lightbox>}
           </Masonry>
-
         </div>
       );
   }

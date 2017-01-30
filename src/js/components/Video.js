@@ -29,11 +29,6 @@ export default class Video extends React.Component{
             photoIndex,
             isOpen
         } = this.state;
-
-    var style = {
-        listStyle: "none"
-      };
-    var imageStyle = this.props.style
     var childElements = this.props.elements.imageInfo.map((element)=>{
         return (
              <div class = "video-wrapper col-lg-6 col-md-6 col-sm-12" >

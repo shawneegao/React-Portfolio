@@ -6,28 +6,23 @@ var Roles = React.createClass({
      this.rotate();
    },
     render:function(){
-      console.log(this.props)
-      var style = {
-          listStyle: "none"
-      };
        return (
          <div class="wrapper">
           <div class = "reenie final">It&#39;s nice to meet you</div>
            <div class="roles">
-         <div>
-             I am a developer.
-         </div>
-         <div>
-             I am a guilt-induced health enthusiast.
-         </div>
-         <div>
-             I am a wannabe artist.
-         </div>
-         <div>
-             I am an aspiring individual.
-         </div>
-
-         </div>
+             <div>
+                 I am a developer.
+             </div>
+             <div>
+                 I am a guilt-induced health enthusiast.
+             </div>
+             <div>
+                 I am a wannabe artist.
+             </div>
+             <div>
+                 I am an aspiring individual.
+             </div>
+             </div>
          </div>
         );
     },

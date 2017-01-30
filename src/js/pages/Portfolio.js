@@ -1,6 +1,7 @@
 import React from "react"
 import Image from "../components/Image"
 const rootImageFolder = "../../imagesrc/"
+import style from "./Portfolio.css"
 
 var elements = '{\
   "imageInfo": [\
@@ -10,19 +11,29 @@ var elements = '{\
       "caption": "A friend\'s original character"\
     },\
     {\
-      "title": "Niffler",\
-      "src": "../../imagesrc/Niffler.jpg",\
-      "caption": "...holding onto his hopes and dreams"\
-    },\
+     "title": "Nana",\
+     "src": "../../imagesrc/Nana.jpg",\
+     "caption": "Practice painting darker skin"\
+   },\
     {\
       "title": "Picking Favorites",\
       "src": "../../imagesrc/Bowtruckle.jpg",\
       "caption": "Best relationship in the movie"\
     },\
-     {\
-      "title": "Nana",\
-      "src": "../../imagesrc/Nana.jpg",\
-      "caption": "My first try painting darker skin"\
+    {\
+      "title": "Circus",\
+      "src": "../../imagesrc/Circus.jpg",\
+      "caption": "Alternative career goals"\
+    },\
+    {\
+      "title": "Niffler",\
+      "src": "../../imagesrc/Niffler.jpg",\
+      "caption": "...holding onto his hopes and dreams"\
+    },\
+    {\
+      "title": "Close up - Niffler",\
+      "src": "../../imagesrc/NifflerCloseup.jpg",\
+      "caption": "...holding onto his hopes and dreams"\
     },\
     {\
       "title": "Gold Fish",\
@@ -49,6 +60,21 @@ var elements = '{\
       "src": "../../imagesrc/PiJoules.jpg",\
       "caption": "I like my co-worker\'s dogs"\
     },\
+    {\
+     "title": "If You Give a Mouse a Cookie",\
+     "src": "../../imagesrc/mouse.jpg",\
+     "caption": "An ode to a favorite children\'s book"\
+   },\
+   {\
+    "title": "Soldier in Apocalypse",\
+    "src": "../../imagesrc/tokyo.jpg",\
+    "caption": "Inspired by Tsuabasa by CLAMP"\
+  },\
+  {\
+   "title": "Close Up - Soldier in Apocalypse",\
+   "src": "../../imagesrc/tokyoCloseup.jpg",\
+   "caption": "Inspired by Tsuabasa by CLAMP"\
+ },\
      {\
       "title": "For a Shoe Lover",\
       "src": "../../imagesrc/Shoes.jpg",\
@@ -57,7 +83,7 @@ var elements = '{\
      {\
       "title": "Peppers",\
       "src": "../../imagesrc/Peppers.jpg",\
-      "caption": "Would you call this interpretated realism?"\
+      "caption": "Some kitchen decor"\
     },\
      {\
       "title": "Dachshund",\
@@ -80,12 +106,9 @@ export default class Portfolio extends React.Component{
       };
   }
   render(){
-    var imageStyle = {
-        width: 300
-    };
     return(
-      <div>
-        <Image style = {imageStyle} elements ={this.state.elements}/>
+      <div class = "col-lg-12">
+        <Image style = {style.imageStyle} elements ={this.state.elements}/>
       </div>
     );
   }

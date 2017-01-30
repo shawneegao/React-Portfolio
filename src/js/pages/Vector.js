@@ -1,5 +1,6 @@
 import React from "react"
 import Video from '../components/Video'
+import style from "./Vector.css"
 
 var elements = '{\
   "imageInfo": [\
@@ -37,7 +38,7 @@ export default class Vector extends React.Component{
       <div class= 'container'>
         <div class = "row">
           <div class = "col-lg-12 col-md-12 col-sm-12">
-            <Video elements ={this.state.elements}/>
+            <Video style = {style.vectorStyle} elements ={this.state.elements}/>
           </div>
         </div>
       </div>

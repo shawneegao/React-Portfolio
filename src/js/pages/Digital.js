@@ -1,6 +1,7 @@
 import React from "react"
 import Image from "../components/Image"
 const rootImageFolder = "../../imagesrc/"
+import style from "./Digital.css"
 
 var elements = '{\
   "imageInfo": [\
@@ -50,14 +51,10 @@ export default class Digital extends React.Component{
       };
   }
   render(){
-    var imageStyle = {
-        width: 200,
-        marginBottom:30
-    };
     return(
       <div>
         <h2>mostly just me being anime trash ....</h2>
-        <Image style = {imageStyle} elements ={this.state.elements}/>
+        <Image style = {style.imageStyle} elements ={this.state.elements}/>
       </div>
     );
   }

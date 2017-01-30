@@ -1,5 +1,6 @@
 import React from "react"
 var Masonry = require('react-masonry-component');
+import style from "./Minions.css"
 
 var masonryOptions = {
     transitionDuration: 0,
@@ -7,19 +8,13 @@ var masonryOptions = {
 };
 
 var Image = React.createClass({
-
-    render:function(){
-      console.log(this.props)
-      var imageStyle = {
-          listStyle: "none",
-          width:"200px"
-      };
+  render:function(){
       var childElements = this.props.elements.imageInfo.map(function(element){
           return (
-            <div class = "col-lg-3">
-                   <img style ={imageStyle} src={element.src} />
-               <p class = "pet-name">{element.title}</p>
-               <a href={element.caption}>{element.extra}</a>
+            <div class = "col-lg-3 col-md-6 col-sm-6">
+              <img class = {style.minionStyle} src={element.src} />
+              <p class = "pet-name">{element.title}</p>
+              <a href={element.caption}>{element.extra}</a>
             </div>
            );
        });
