@@ -67,12 +67,12 @@ var elements = '{\
    },\
    {\
     "title": "Soldier in Apocalypse",\
-    "src": "../../imagesrc/tokyo.jpg",\
+    "src": "../../imagesrc/Tokyo.jpg",\
     "caption": "Inspired by Tsuabasa by CLAMP"\
   },\
   {\
    "title": "Close Up - Soldier in Apocalypse",\
-   "src": "../../imagesrc/tokyoCloseup.jpg",\
+   "src": "../../imagesrc/TokyoCloseup.jpg",\
    "caption": "Inspired by Tsuabasa by CLAMP"\
  },\
      {\
